@@ -1,0 +1,9 @@
+/bin/
+.gradle/
+.classpath
+.project
+.settings/
+build/
+.travis.yml
+src/main/java/Library.java
+src/test/java/LibraryTest.java
