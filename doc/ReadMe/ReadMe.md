@@ -1,4 +1,4 @@
-# ClearnessIndex
+# DataFilter
 
 `@author` Niccolò Tubini, Stefano Tasin
 
