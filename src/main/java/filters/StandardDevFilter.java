@@ -16,7 +16,7 @@ public class StandardDevFilter implements Filter{
 	 * @param sigma
 	 * @param isSoft
 	 */
-	public StandardDevFilter(double sigma, boolean isSoft) {
+	public StandardDevFilter(double value, double sigma, boolean isSoft) {
 		System.out.println("Filter selected: StandardDevFilter");
 		this.sigma = sigma;
 		this.isSoft = isSoft;
@@ -27,4 +27,12 @@ public class StandardDevFilter implements Filter{
 				+ "	sigma: "       + sigma   + "\n"
 				+ "	is_soft: "     + isSoft  + "\n");
 	}
+	
+	
+	@Override
+	public double compute(){
+		System.out.println("StandardDevFilter not yet implemented");
+		return -999;
+	}
+	
 }

@@ -30,7 +30,7 @@ public class MinMaxFilter implements Filter{
 	public MinMaxFilter(){
 		System.out.println("Filter selected: MinMaxFilter");
 	}
-	public MinMaxFilter(double minVal, double maxVal, double minSoft, double maxSoft, boolean isSoft) {
+	public MinMaxFilter(double value, double minVal, double maxVal, double minSoft, double maxSoft, boolean isSoft) {
 		System.out.println("Filter selected: MinMaxFilter");
 		this.minVal = minVal;
 		this.maxVal = maxVal;
@@ -56,4 +56,10 @@ public class MinMaxFilter implements Filter{
 		return sum;
 	}
 	*/
+	
+	@Override
+	public double compute(){
+		return -999;
+	}
+	
 }

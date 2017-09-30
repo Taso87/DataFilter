@@ -16,7 +16,7 @@ public class RateFilter implements Filter{
 	 * @param minRate
 	 * @param maxRate
 	 */
-	public RateFilter(double minRate, double maxRate) {
+	public RateFilter(double value, double minRate, double maxRate) {
 		System.out.println("Filter selected: RateFilter");
 		this.minRate = minRate;
 		this.maxRate = maxRate;
@@ -26,5 +26,11 @@ public class RateFilter implements Filter{
 		System.out.println("Filter's parameters are: \n"
 				+ "	min_rate: "  + minRate  + "\n"
 				+ "	max_rate: "  + maxRate  + "\n");
+	}
+	
+	
+	@Override
+	public double compute(){
+		return -999;
 	}
 }

@@ -1,5 +1,7 @@
 package filters;
 
+import org.jgrasstools.gears.libs.modules.JGTConstants;
+
 public class HSEnvelopeFilter implements Filter{
 	
 	/** */
@@ -20,7 +22,7 @@ public class HSEnvelopeFilter implements Filter{
 	 * @param an
 	 * @param windowSize
 	 */
-	public HSEnvelopeFilter(double ap, double an, int windowSize) {
+	public HSEnvelopeFilter(double value, double ap, double an, int windowSize) {
 		System.out.println("Filter selected: HSEnvelope");
 		this.ap = ap;
 		this.an = an;
@@ -32,5 +34,10 @@ public class HSEnvelopeFilter implements Filter{
 				+ "	ap: "          + ap          + "\n"
 				+ "	an: "          + an          + "\n"
 				+ "	windowSize: "  + windowSize  + "\n");
+	}
+	
+	@Override
+	public double compute(){
+		return -999;
 	}
 }

@@ -1,5 +1,7 @@
 package filters;
 
+import org.jgrasstools.gears.libs.modules.JGTConstants;
+
 public class MinFilter implements Filter {
 	
 	/** The low threshold*/
@@ -11,6 +13,8 @@ public class MinFilter implements Filter {
 	/** */
 	boolean isSoft;
 
+	double value;
+
 	
 	
 	/**
@@ -20,11 +24,13 @@ public class MinFilter implements Filter {
 	 * @param minSoft
 	 * @param isSoft
 	 */
-	public MinFilter(double minVal, double minSoft, boolean isSoft) {
+	public MinFilter(double value, double minVal, double minSoft, boolean isSoft) {
 		System.out.println("Filter selected: MinFilter");
+		this.value = value;
 		this.minVal = minVal;
 		this.minSoft = minSoft;
 		this.isSoft = isSoft;
+
 	}
 	
 	public void Print(){
@@ -34,4 +40,11 @@ public class MinFilter implements Filter {
 				+ "	is_soft:  " + isSoft  + "\n");
 	}
 
+	
+	@Override
+	public double compute(){
+		return (value<minVal)?JGTConstants.doubleNovalue:value;
+	}
+
+	
 }

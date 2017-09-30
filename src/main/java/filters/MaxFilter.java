@@ -20,7 +20,7 @@ public class MaxFilter implements Filter{
 	 * @param maxSoft
 	 * @param isSoft
 	 */
-	public MaxFilter(double maxVal, double maxSoft, boolean isSoft) {
+	public MaxFilter(double value, double maxVal, double maxSoft, boolean isSoft) {
 		System.out.println("Filter selected: MinFilter");
 		this.maxVal = maxVal;
 		this.maxSoft = maxSoft;
@@ -32,5 +32,10 @@ public class MaxFilter implements Filter{
 				+ "	max_val:  " + maxVal  + "\n"
 				+ "	max_soft: " + maxSoft + "\n"
 				+ "	is_soft:  " + isSoft  + "\n");
+	}
+	
+	@Override
+	public double compute(){
+		return -999;
 	}
 }
